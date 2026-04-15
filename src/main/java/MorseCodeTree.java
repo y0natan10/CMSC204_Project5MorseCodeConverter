@@ -195,9 +195,10 @@ public class MorseCodeTree implements LinkedConverterTreeInterface<String> {
 			return;
 		}
 		this.LNRoutputTraversal(root.getLeft(), list);
-		if (!root.getData().equals("")) {
-			list.add(root.getData());
-		}
+		// can't use this because the test cases expect there to be an extra space
+		// if (!root.getData().equals("")) {
+		list.add(root.getData());
+
 		this.LNRoutputTraversal(root.getRight(), list);
 	}
 
