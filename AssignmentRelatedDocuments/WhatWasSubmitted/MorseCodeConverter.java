@@ -19,11 +19,6 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * the spine of the project this file takes everything else and ties it all
- * together it can take in a file that contains morse code, parses it into more
- * easily processable Strings and then converts those strings to english
- */
 public class MorseCodeConverter {
 
 	private static MorseCodeTree morseTree = new MorseCodeTree();

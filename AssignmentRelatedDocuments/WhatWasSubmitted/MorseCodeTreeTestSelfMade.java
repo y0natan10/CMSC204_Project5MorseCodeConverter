@@ -11,11 +11,6 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Test case file for all* of the (self made) methods used in the project
- * *does not directly test all methods 
- * but the greater methods that use the mini methods
- */
 public class MorseCodeTreeTestSelfMade {
 	MorseCodeTree tree;
 
