@@ -127,10 +127,13 @@ public class MorseCodeTree implements LinkedConverterTreeInterface<String> {
 	public String fetch(String code) {
 		// all letters have a code length of 4 or less
 		// if the code is longer than 4, there was a mistake
-		if (code.length() > 4) {
-			throw new UnsupportedOperationException("Code length must be 4 or less");
+		// code must consist of . or -
+		if (code == null || !code.matches("[" + LEFT + RIGHT + "]{1,4}")) {
+			// explanation of .matches
+			// first section [] is the stuff that is allowed to be in the calling string
+			// second section is the length, 1 to 4
+			throw new InvalidCodeException("Code must be between 1 and 4 symbols of \'.\' or \'-\'");
 		}
-
 		return this.fetchNode(this.root, code);
 	}
 

@@ -23,12 +23,6 @@ public class MorseCodeConverter {
 
 	private static MorseCodeTree morseTree = new MorseCodeTree();
 
-//	/**
-//	 * constructor to initialize the letters at their correct positions
-//	 */
-//	public MorseCodeConverter() {
-//	}
-
 	/**
 	 * Converts a file of Morse code into English Each letter is delimited by a
 	 * space (‘ ‘). Each word is delimited by a ‘/’. Example: a file that contains
@@ -55,6 +49,7 @@ public class MorseCodeConverter {
 			res.append(convertToEnglish(line));
 			// can't use 'this.' because static :[
 		}
+		scanner.close();
 
 		return res.toString();
 	}
